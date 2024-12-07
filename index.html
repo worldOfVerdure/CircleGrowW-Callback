@@ -96,7 +96,7 @@
 
       @container circleSize (200px <= width < 600px) {
         p#message {
-          font-size: calc(2rem + 2cqi);
+          font-size: calc(2rem + 5cqi);
           max-width: 90cqi;
         }
       }
@@ -124,17 +124,17 @@
     <main>
       <div id="inputs">
         <label for="cx">cx: </label>
-        <input id="cx" type="number" value="75" oninput="editBtntext()" />
+        <input id="cx" type="number" value="150" oninput="editBtntext()" />
 
         <label for="cy">cy: </label>
-        <input id="cy" type="number" value="75" oninput="editBtntext()" />
+        <input id="cy" type="number" value="300" oninput="editBtntext()" />
 
         <label for="r">r: </label>
         <input id="r" type="number" value="100" min="0" oninput="editBtntext()" />
       </div>
 
       <button id="circleGenerator" type="button" onclick="growCircle()">
-        Generate Circle: cx = 75, cy = 75, r = 100
+        Generate Circle: cx = 150, cy = 300, r = 100
       </button>
     </main>
 
