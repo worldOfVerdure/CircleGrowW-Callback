@@ -86,7 +86,13 @@
 
       @container circleSize (100px <= width < 150px) {
         p#message {
-          font-size: 1.5rem;
+          font-size: calc(1rem + 3cqi);
+        }
+      }
+
+      @container circleSize (125px <= width < 150px) {
+        p#message {
+          width: 90%;
         }
       }
 
