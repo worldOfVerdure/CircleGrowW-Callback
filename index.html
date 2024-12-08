@@ -38,6 +38,8 @@
         cursor: pointer;
       }
 
+      /* #input -> main */
+
       main, #inputs {
         align-items: center;
         display: flex;
@@ -48,12 +50,13 @@
         font-size: 62.5%;
       }
 
-      div#inputs {
+      #inputs {
         gap: 2rem;
       }
 
       input {
         font-size: 1.8rem;
+        width: 5rem;
       }
 
       main {
@@ -64,7 +67,7 @@
         gap: 1rem;
         padding: 1rem;
         position: relative;
-        margin: 1rem 0 0 1.5rem; 
+        margin: 1rem auto 1.5rem; 
         width: fit-content;
         z-index: 1;  
       }
@@ -117,6 +120,20 @@
           opacity: 100%;
         }
       }
+
+      @media (320px <= width < 500px) {
+        #circleGenerator {
+          font-size: 1.3rem;
+        }
+
+        #inputs {
+          gap: 1rem;
+        }
+
+        label {
+          font-size: 1.8rem;
+        }
+      }
     </style>
 
   </head>
@@ -124,13 +141,13 @@
     <main>
       <div id="inputs">
         <label for="cx">cx: </label>
-        <input id="cx" type="number" value="150" oninput="editBtntext()" />
+        <input id="cx" oninput="editBtntext()" type="number" value="150"  />
 
         <label for="cy">cy: </label>
-        <input id="cy" type="number" value="300" oninput="editBtntext()" />
+        <input id="cy" oninput="editBtntext()" type="number" value="300" />
 
         <label for="r">r: </label>
-        <input id="r" type="number" value="100" min="0" oninput="editBtntext()" />
+        <input id="r" oninput="editBtntext()" type="number" value="100" min="0" />
       </div>
 
       <button id="circleGenerator" type="button" onclick="growCircle()">
